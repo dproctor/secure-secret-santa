@@ -21,7 +21,7 @@ Devon.
 2. assign pairings
 
 ```
-python assign_pairiings.py
+python assign_pairings.py
 ```
 
 actually creates the assignment by randomly sampling all permutations, and
@@ -33,7 +33,7 @@ give to each other, or other such conditions.
 3. reveal assignments
 
 ```
-python assign_pairiings.py  \
+python assign_pairings.py  \
   --assignment assignments/{YOUR_NAME} \
   --private_key {YOUR_PRIVATE_KEY}
 ```
