@@ -19,7 +19,7 @@ This script can be used in three different modes:
     rejecting candidate pairings that don't satisfy the conditions of a valid
     pairing. Right now, this enforces that no one gives to themselves, and that
     no one gives to their partner. We might consider adding that no two people
-    give to eachother, or other such conditions.
+    give to each other, or other such conditions.
 
 3. reveal assignments
 
