@@ -13,7 +13,7 @@ This script can be used in three different modes:
 
 2. assign pairings
 
-    python assign_pairiings.py
+    python assign_pairings.py
 
     actually creates the assignment by randomly sampling all permutations, and
     rejecting candidate pairings that don't satisfy the conditions of a valid
@@ -23,7 +23,7 @@ This script can be used in three different modes:
 
 3. reveal assignments
 
-    python assign_pairiings.py  \
+    python assign_pairings.py  \
         --assignment assignments/{YOUR_NAME} \
         --private_key {YOUR_PRIVATE_KEY}
 
