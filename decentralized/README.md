@@ -13,10 +13,10 @@ All participants a_i go to www.$DOMAIN_NAME/room/$ROOM_NAME.
 
 # Algorithm
 
-1. Shared SALT generated together, concatenation of individual salts.
-2. Each a_i makes private and public keys {Pu_i, Pr_i} based on SALT and
-   publishes Pu_i.
-3.
+1. Shared `SALT` generated together, concatenation of individual salts.
+2. Each `a_i` makes private and public keys `{Pu_i, Pr_i}` based on `SALT` and
+   publishes `Pu_i`.
+3. Run `attempt_assignment()` until success.
 ```
 def attempt_assignment() -> bool:
 """
@@ -58,3 +58,5 @@ a_i                                 a_j
 Then, both a_i, a_j can check whether r_i == r_j
 """
 ```
+4. After gift giving happens, all participants publish `Pr_i`, to verify
+   honesty.
