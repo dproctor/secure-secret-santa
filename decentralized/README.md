@@ -1,3 +1,26 @@
+# Goal
+Assign secret santa assignments in a secure way.
+
+# Considered attack models
+
+## Nosy third party
+Any third party will try to learn the assigment, potentially in collaboration
+wtih some combination of participants.
+## Malicious participant
+Participants may attempt to alter any code they are running.
+
+# Solution
+
+## Properties
+- No third party can learn anything about the assignment.
+- If all participants run the code they are supposed to, generates a random
+  assignment without any participant learning anything about the assignment
+  other than their own recipient.
+- Auditable. After the gift exchange, the participants can verify that the
+  other participants were honest.
+
+## Description
+
 Participants A = {a_0, ..., a_n}
 
 Exclusion sets X_i = {b_0, ..., b__m}
@@ -6,12 +29,12 @@ A, X_i all public.
 
 All participants a_i go to www.$DOMAIN_NAME/room/$ROOM_NAME.
 
-# Server endpoints
+### Server endpoints
 
 1. /room/$ROOM_NAME static, serves resources for js app.
 2. /channel configures webrtc channel
 
-# Algorithm
+### Algorithm
 
 1. Shared `SALT` generated together, concatenation of individual salts.
 2. Each `a_i` makes private and public keys `{Pu_i, Pr_i}` based on `SALT` and
@@ -58,5 +81,4 @@ a_i                                 a_j
 Then, both a_i, a_j can check whether r_i == r_j
 """
 ```
-4. After gift giving happens, all participants publish `Pr_i`, to verify
-   honesty.
+4. After gift giving happens, all participants publish `Pr_i`, as audit.
