@@ -6,7 +6,7 @@ A, X_i all public.
 
 All participants a_i go to www.$DOMAIN_NAME/room/$ROOM_NAME.
 
-# Server endpoints:
+# Server endpoints
 
 1. /room/$ROOM_NAME static, serves resources for js app.
 2. /channel configures webrtc channel
